@@ -1,145 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>FXLab – Nouveautés</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      margin: 0;
-    }
-
-    header {
-      background-color: #000;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #111;
-    }
-
-    header h1 {
-      font-size: 1.8rem;
-      color: #0ff;
-      margin: 0;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 25px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #0ff;
-    }
-
-    main {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 40px;
-      color: #0ff;
-    }
-
-    .updates {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .update-card {
-      background-color: #111;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .update-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 25px rgba(0,255,255,0.2);
-    }
-
-    .update-card h3 {
-      margin-top: 0;
-      color: #fff;
-    }
-
-    .update-date {
-      font-size: 0.85rem;
-      color: #0ff;
-      margin-bottom: 10px;
-    }
-
-    .update-desc {
-      font-size: 1rem;
-      color: #ccc;
-    }
-
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      color: #777;
-      margin-top: 40px;
-    }
-  </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <h1>FXLab</h1>
-    <nav>
+    <div class="nav">
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <h1>FXLab</h1>
+      </div>
+      <nav class="links">
+        <a href="index.html">Accueil</a>
+        <a href="presets.html">Presets</a>
+        <a href="news.html" aria-current="page">Nouveautés</a>
+        <a href="contributors.html">Contributeurs</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html" class="cta-small">Contact</a>
+      </nav>
+      <button class="burger" onclick="toggleMenu()">☰</button>
+    </div>
+    <nav id="mobileNav" class="mobile">
       <a href="index.html">Accueil</a>
       <a href="presets.html">Presets</a>
       <a href="news.html">Nouveautés</a>
       <a href="contributors.html">Contributeurs</a>
       <a href="about.html">À propos</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="cta-small">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <h2>🆕 Nouveautés & Mises à jour</h2>
+  <!-- Hero -->
+  <section class="hero">
+    <span class="super">Dernières annonces et mises à jour</span>
+    <h2>Actualités FXLab</h2>
+    <p>Restez au courant des nouveautés, packs publiés et collaborations.</p>
+  </section>
 
-    <div class="updates">
-      <div class="update-card">
-        <h3>Mise à jour de l'interface</h3>
-        <p class="update-date">06 septembre 2025</p>
-        <p class="update-desc">Nous avons mis à jour l'interface du site FXLab pour une meilleur expérience sur ordinateur et avec l'arrivée d'une version BETA sur Android.</p>
-      </div>
-
-      <div class="update-card">
-        <h3>Vous avez besoin d'inspiration ?</h3>
-        <p class="update-date">15 aout 2025</p>
-        <p class="update-desc">+150 miniatures disponible dans un pack d'images venant du YouTubeur romanf888 !!!</p>
-      </div>
-
-      <div class="update-card">
-        <h3>La nostalgie de 2023 revient ?</h3>
-        <p class="update-date">27 juillet 2025</p>
-        <p class="update-desc">Retrouver notre pack de bannière de romanf888 datant de 2023 dans notre page presets du site !!!</p>
-      </div>
+  <main class="wrap">
+    <div class="grid">
+      <article class="article">
+        <img src="pictures/news1.jpg" alt="Annonce pack">
+        <div>
+          <h4>Sortie du pack Smooth Transitions</h4>
+          <p>Des transitions dynamiques optimisées pour Premiere Pro.</p>
+        </div>
+      </article>
+      <article class="article">
+        <img src="pictures/news2.jpg" alt="Nouvelle musique">
+        <div>
+          <h4>Nouvelles musiques disponibles</h4>
+          <p>Ajout de fonds sonores pour vos vidéos YouTube & TikTok.</p>
+        </div>
+      </article>
     </div>
   </main>
 
   <footer>
-    © 2025 FXLab et romanf888 studio's – Tous droits réservés.
+    © 2025 FXLab – Tous droits réservés
   </footer>
 
+  <script>
+    function toggleMenu(){
+      document.getElementById('mobileNav').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
