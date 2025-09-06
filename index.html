@@ -85,14 +85,42 @@
       border:1px solid #133; background:rgba(0,255,255,.06); color:var(--accent)
     }
     .btn:hover{background:rgba(0,255,255,.12)}
-    .btn-primary{background:var(--accent); color:#000; border-color:transparent}
-    .btn-primary:hover{background:var(--accent-2)}
+    .btn-primary {
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:10px;   /* arrondi */
+  font-weight:700;
+  border:1px solid transparent;
+  background:var(--accent);
+  color:#000;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background:var(--accent-2);
+  transform: translateY(-2px);
+}
 
     /* Articles / Actus */
     .article{display:flex; gap:16px; padding:14px; border:1px solid #121212; border-radius:16px; background:#0b0b0b}
     .article img{width:120px; height:80px; object-fit:cover; border-radius:10px; background:#151515}
     .article h4{margin:0 0 6px}
     .article p{margin:0; color:#b8b8b8; font-size:.95rem}
+    .article {
+  display:flex; 
+  gap:16px; 
+  padding:14px; 
+  border:1px solid #121212; 
+  border-radius:16px; 
+  background:#0b0b0b;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px var(--ring);
+  border-color: #1b1b1b;
+}
 
     /* Partenaires */
     .partners{
@@ -198,7 +226,7 @@
           <p class="desc">Les musiques de fond préférées des créateurs Minecraft, prêtes pour vos vidéos.</p>
           <div class="actions">
             <a class="btn" href="presets.html">Détails</a>
-            <a class="btn-primary" href="https://drive.google.com/drive/folders/12WOY9GSO-vzHcJGz19avpRdbGQsEaAmz?usp=sharing" target="_blank" rel="noopener">Télécharger</a>
+            <a class="btn-primary" href="lien" target="_blank" rel="noopener">Télécharger</a>
           </div>
         </div>
       </article>
@@ -255,7 +283,7 @@
     <!-- Partenaires -->
     <div class="section-head" style="margin-top:34px;">
       <h3>Partenariats</h3>
-      <span style="color:#8a8a8a;font-size:.95rem"> Devenez créateur pour FXLab : <a href="contact.html" style="color:var(--accent)">Contact</a></span>
+      <span style="color:#8a8a8a;font-size:.95rem"> Devenez créateur : <a href="contact.html" style="color:var(--accent)">Contact</a></span>
     </div>
     <div class="partners" aria-label="Partenaires">
       <!-- Remplace les src par tes logos (images locales) -->

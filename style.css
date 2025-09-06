@@ -196,11 +196,20 @@ header {
 }
 .btn:hover { background:rgba(0,255,255,.12); }
 .btn-primary {
-  background:var(--accent); 
-  color:#000; 
-  border-color:transparent;
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:10px;   /* arrondi */
+  font-weight:700;
+  border:1px solid transparent;
+  background:var(--accent);
+  color:#000;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
-.btn-primary:hover { background:var(--accent-2); }
+
+.btn-primary:hover {
+  background:var(--accent-2);
+  transform: translateY(-2px);
+}
 
 /* Articles / Actus */
 .article {
@@ -210,6 +219,13 @@ header {
   border:1px solid #121212; 
   border-radius:16px; 
   background:#0b0b0b;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px var(--ring);
+  border-color: #1b1b1b;
 }
 .article img {
   width:120px; 
