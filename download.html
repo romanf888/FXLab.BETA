@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FXLab – Télécharger pour Android</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css"> <!-- Ton CSS global -->
+  <style>
+    /* Styles spécifiques à la page téléchargement */
+    .download-hero{
+      max-width:900px; margin:60px auto; text-align:center; padding:40px 20px;
+    }
+    .download-hero h2{font-size:clamp(2rem,4vw,3rem); margin:14px 0}
+    .download-hero p{color:var(--muted); font-size:1.1rem; margin-bottom:26px}
+    .download-btn{
+      display:inline-block; padding:16px 26px; border-radius:16px;
+      background:var(--accent); color:#000; font-weight:800; font-size:1.1rem;
+      box-shadow:0 14px 40px var(--ring); transition:.25s ease;
+    }
+    .download-btn:hover{background:var(--accent-2); transform:translateY(-3px)}
+    .features{margin-top:60px; display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .feature{
+      background:#0b0b0b; border:1px solid #121212; border-radius:16px; padding:24px;
+      transition:.25s ease; text-align:center;
+    }
+    .feature:hover{transform:translateY(-4px); box-shadow:0 12px 40px var(--ring)}
+    .feature h3{margin:0 0 10px; color:var(--accent)}
+    .feature p{color:#bdbdbd; font-size:.95rem}
+    .preview{
+      margin-top:50px; text-align:center;
+    }
+    .preview img{
+      max-width:800px; border-radius:20px; border:1px solid #111;
+      box-shadow:0 10px 40px var(--ring);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header identique à index.html -->
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <h1>FXLab</h1>
+      </div>
+
+      <nav class="links" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="presets.html">Presets</a>
+        <a href="news.html">Nouveautés</a>
+        <a href="contributors.html">Contributeurs</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html" class="cta-small">Contact</a>
+      </nav>
+
+      <button class="burger" aria-label="Ouvrir le menu" onclick="toggleMenu()">
+        ☰
+      </button>
+    </div>
+
+    <nav id="mobileNav" class="mobile" aria-label="Navigation mobile">
+      <a href="index.html">Accueil</a>
+      <a href="presets.html">Presets</a>
+      <a href="news.html">Nouveautés</a>
+      <a href="contributors.html">Contributeurs</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html" class="cta-small" style="display:inline-block; width:max-content">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Section principale téléchargement -->
+  <section class="download-hero">
+    <h2>Téléchargez FXLab pour Android</h2>
+    <p>Téléchargez des presets et des ressources créatives en ilimités depuis votre smartphone Android !!!</p>
+    <a class="download-btn" href="Mobile/APK/FXLab-1.00.apk" download>Télécharger l’APK</a>
+  </section>
+
+  <!-- Avantages -->
+  <main class="wrap">
+    <div class="features">
+      <div class="feature">
+        <h3>✨ Compatibilités mobile</h3>
+        <p>Une interface fluide et rapide, pensée pour la création mobile et optimiser pour tous vos logiciels de montages mobile.</p>
+      </div>
+      <div class="feature">
+        <h3>📂 Gestion de téléchargements</h3>
+        <p>Télécharger en ilimités des ressources créatives sur votre appareil mobile.</p>
+      </div>
+      <div class="feature">
+        <h3>🔒 100% Gratuit et sécurisé</h3>
+        <p>Téléchargement sécurisé, aucun virus, aucun abonnement requis, pas de publicités.</p>
+      </div>
+    </div>
+
+    <!-- Aperçu app -->
+    <div class="preview">
+      <!-- Remplace par une capture de ton app -->
+      <img src="pictures/Iphone-présentation.gif" alt="Aperçu FXLab Android">
+    </div>
+  </main>
+
+  <footer>
+    © 2025 FXLab – Tous droits réservés • <a href="contributors.html" style="color:var(--accent)">Contributeurs</a>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      const el = document.getElementById('mobileNav');
+      el.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
