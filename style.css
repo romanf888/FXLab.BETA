@@ -1,14 +1,16 @@
-/* Variables de couleurs */
+/* -------------------- Variables et Base -------------------- */
 :root {
-  --bg: #0d0d0d;
+  --bg: #0d0d1a;
   --card: rgba(255, 255, 255, 0.05);
   --card-border: rgba(255, 255, 255, 0.1);
   --text: #ffffff;
   --muted: #a0a0a0;
-  --accent: #1e88e5;
+  --accent: #00ffff;
   --accent-light: #42a5f5;
   --red: #f44336;
   --yellow: #ffc107;
+  --bg-gradient: radial-gradient(circle at 10% 10%, rgba(0, 255, 255, 0.05), transparent 25%),
+                 radial-gradient(circle at 90% 90%, rgba(0, 255, 255, 0.05), transparent 25%);
 }
 
 /* Base */
@@ -16,9 +18,18 @@ body {
   font-family: 'Inter', sans-serif;
   color: var(--text);
   background-color: var(--bg);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  background-size: cover;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  animation: bg-pulse 10s infinite alternate ease-in-out;
+}
+
+@keyframes bg-pulse {
+  0% { background-size: 100% 100%; }
+  100% { background-size: 110% 110%; }
 }
 
 /* Effet de verre dépoli */
@@ -34,11 +45,15 @@ body {
 }
 .cta-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(30, 136, 229, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+}
+.card {
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
 }
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 25px rgba(0, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .mobile-nav {
   transition: transform 0.3s ease-in-out;
@@ -139,5 +154,5 @@ body {
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent) !important;
-  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.3);
+  box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.3);
 }
